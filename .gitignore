@@ -1,0 +1,17 @@
+# R session artifacts
+.Rproj.user/
+.Rhistory
+.RData
+.Rout
+
+# Compiled output directory
+output/
+
+# LaTeX / R Markdown build artifacts (regenerated on each render)
+analysis/report.log
+analysis/report_cache/
+analysis/report_files/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
