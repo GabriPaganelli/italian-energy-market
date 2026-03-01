@@ -5,13 +5,13 @@
 
 ## Italiano
 
-### Overview
+### Panoramica
 
 Progetto universitario di analisi delle relazioni dinamiche tra il PUN (Prezzo Unico Nazionale),
 il prezzo del gas naturale e la produzione da fonti rinnovabili nel mercato elettrico italiano
 nel periodo 2021–2025, nell'ambito del corso di Modelli Statistici per Dati Economici (gennaio 2026).
 
-### Methodology
+### Metodologia
 
 L'analisi impiega una suite di modelli di serie storiche:
 
@@ -22,16 +22,16 @@ L'analisi impiega una suite di modelli di serie storiche:
 
 I dati coprono il periodo 2021–2025 a frequenza settimanale/mensile.
 
-### Repository Structure
+### Struttura del Repository
 
 ```
 italian-energy-market/
 ├── README.md
 ├── LICENSE
-├── energy_market_report.pdf   # Report pre-compilato (visualizzazione diretta)
-├── energy_analysis.Rproj      # RStudio project (apri questo per gestione path)
+├── energy_market_report.pdf   # Report pre-compilato
+├── energy_analysis.Rproj      # RStudio project
 ├── analysis/
-│   └── report.Rmd             # Documento principale (unica fonte di verità)
+│   └── report.Rmd             # Documento principale
 ├── data/
 │   ├── prezzi/                # Prezzi orari PUN (GME, Anno_YYYY_12.xlsx)
 │   ├── gas/                   # Prezzi gas MGP (GME, Annotermico_*.xlsx)
@@ -39,9 +39,9 @@ italian-energy-market/
 └── output/                    # PDF rigenerato (non tracciato da git)
 ```
 
-### Installation
+### Installazione
 
-R ≥ 4.0 e RStudio. Apri `energy_analysis.Rproj` in RStudio per attivare la
+R ≥ 4.0 e RStudio. Aprire `energy_analysis.Rproj` in RStudio per attivare la
 gestione automatica dei path.
 
 ```r
@@ -50,14 +50,14 @@ install.packages(c("here", "forecast", "dplyr", "readxl", "lubridate",
                    "MTS", "knitr", "kableExtra"))
 ```
 
-### Usage
+### Esecuzione
 
 ```r
-# Compila il report PDF
+# Per compilare il report PDF
 rmarkdown::render("analysis/report.Rmd", output_dir = "output")
 ```
 
-### Results
+### Risultati
 
 Il report pre-compilato è disponibile in `energy_market_report.pdf` per la visualizzazione diretta.
 Nuove compilazioni vengono salvate in `output/report.pdf` (cartella non tracciata da git).
@@ -68,7 +68,7 @@ Il report include:
 - Funzioni di risposta all'impulso (IRF) e decomposizione della varianza
 - Interpretazione economica delle relazioni tra le tre serie
 
-### Author
+### Autori
 
 **Giorgia Caicchiolo, Gabriele Paganelli** — Academic Portfolio
 Modelli Statistici per Dati Economici, Università di Padova, gennaio 2026.
@@ -106,15 +106,15 @@ Data cover the period 2021–2025 at weekly/monthly frequency.
 italian-energy-market/
 ├── README.md
 ├── LICENSE
-├── energy_market_report.pdf   # Pre-compiled report (for direct viewing)
-├── energy_analysis.Rproj      # RStudio project (open this for path management)
+├── energy_market_report.pdf   # Pre-compiled report
+├── energy_analysis.Rproj      # RStudio project
 ├── analysis/
-│   └── report.Rmd             # Main document (single source of truth)
+│   └── report.Rmd             # Main document
 ├── data/
 │   ├── prezzi/                # Hourly PUN prices (GME, Anno_YYYY_12.xlsx)
 │   ├── gas/                   # Gas spot prices (GME, Annotermico_*.xlsx)
 │   └── rinnovabili/           # Renewable production (Terna, Rinnovabili_YYYY.xlsx)
-└── output/                    # Re-rendered PDF (not tracked by git)
+└── output/                    # Regenerated PDF (not tracked by Git)
 ```
 
 ### Installation
