@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this project, please cite it as below."
+type: software
+title: "Econometric Modelling of the Italian Energy Market"
+abstract: >
+  Analysis of dynamic relationships between the Italian National Electricity Price (PUN),
+  natural gas prices, and renewable energy production over 2021-2025. Employs time-series
+  models including SARIMA, transfer function, VECM, and VAR. Developed for the Statistical
+  Models for Economic Data course at the University of Padova (January 2026).
+authors:
+  - family-names: Caicchiolo
+    given-names: Giorgia
+    affiliation: "University of Padova"
+  - family-names: Paganelli
+    given-names: Gabriele
+    affiliation: "University of Padova"
+    email: gabrielepaganelli13@gmail.com
+keywords:
+  - energy market
+  - time series
+  - SARIMA
+  - VECM
+  - VAR
+  - cointegration
+  - Italian electricity market
+  - PUN
+license: MIT
+repository-code: "https://github.com/GabriPaganelli/italian-energy-market"
+date-released: "2026-01-01"
