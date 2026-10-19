@@ -1,7 +1,7 @@
 # Tra Vecchie e Nuove Fonti: Modellazione Econometrica del Mercato Energetico Italiano
 # *Econometric Modelling of the Italian Energy Market*
 
-**[Italiano](#italiano) · [English](#english)** · [Report (PDF)](energy_market_report.pdf) · [Web](https://gabripaganelli.github.io/projects/energy-market.html)
+**[Italiano](#italiano) · [English](#english)** · [Report (PDF)](report.pdf) · [Web](https://gabripaganelli.github.io/projects/energy-market.html)
 
 ![Forecast error by horizon](figures/forecast_rmse_mae.png)
 *Errore di previsione fuori campione (RMSE e MAE) per orizzonte da 1 a 14 giorni: il modello a funzione di trasferimento con il gas (TFM_Gas) è il più accurato · Out-of-sample forecast error (RMSE and MAE) by horizon, 1–14 days: the gas transfer-function model (TFM_Gas) is the most accurate — report, §7.4*
@@ -27,7 +27,7 @@ L'analisi impiega una suite di modelli di serie storiche:
 
 I dati coprono il periodo 2021–2025 a frequenza giornaliera (con stagionalità settimanale).
 
-### Struttura del Repository
+### Struttura del repository
 
 ```
 italian-energy-market/
@@ -35,7 +35,7 @@ italian-energy-market/
 ├── LICENSE
 ├── CITATION.cff
 ├── .gitattributes
-├── energy_market_report.pdf   # Report pre-compilato
+├── report.pdf                 # Report pre-compilato
 ├── figures/                   # Immagine del README
 ├── energy_analysis.Rproj      # RStudio project
 ├── analysis/
@@ -58,7 +58,7 @@ install.packages(c("here", "forecast", "dplyr", "readxl", "lubridate",
                    "MTS", "knitr", "kableExtra"))
 ```
 
-### Esecuzione
+### Utilizzo
 
 ```r
 # Per compilare il report PDF
@@ -72,7 +72,7 @@ rmarkdown::render("analysis/report.Rmd", output_dir = "output")
 - Nel modello a funzione di trasferimento Gas → PUN il gas ha un effetto immediato (0,54%) seguito da un effetto ritardato (0,24%)
 - Nel confronto fuori campione (rolling forecast a 14 giorni) il modello TFM_Gas ha RMSE e MAE più bassi a ogni orizzonte; il test di Diebold-Mariano contro ARIMA è significativo su tutti i 14 orizzonti (p ≤ 0,0275)
 
-Il report pre-compilato è disponibile in [`energy_market_report.pdf`](energy_market_report.pdf) per la visualizzazione diretta.
+Il report pre-compilato è disponibile in [`report.pdf`](report.pdf) per la visualizzazione diretta.
 Nuove compilazioni vengono salvate in `output/report.pdf` (cartella non tracciata da git).
 
 Il report include:
@@ -123,7 +123,7 @@ italian-energy-market/
 ├── LICENSE
 ├── CITATION.cff
 ├── .gitattributes
-├── energy_market_report.pdf   # Pre-compiled report
+├── report.pdf                 # Pre-compiled report
 ├── figures/                   # README image
 ├── energy_analysis.Rproj      # RStudio project
 ├── analysis/
@@ -160,7 +160,7 @@ rmarkdown::render("analysis/report.Rmd", output_dir = "output")
 - In the Gas → PUN transfer-function model, gas has an immediate effect (0.54%) followed by a lagged effect (0.24%)
 - In the out-of-sample comparison (14-day rolling forecast) the TFM_Gas model has the lowest RMSE and MAE at every horizon; the Diebold-Mariano test against ARIMA is significant at all 14 horizons (p ≤ 0.0275)
 
-A pre-compiled report is available at [`energy_market_report.pdf`](energy_market_report.pdf) for direct viewing.
+A pre-compiled report is available at [`report.pdf`](report.pdf) for direct viewing.
 New renders are saved to `output/report.pdf` (directory not tracked by git).
 
 The report includes:
